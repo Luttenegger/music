@@ -17,6 +17,29 @@
 
 $(document).ready(function()
 {
+	$("nav a, footer a[href='#main']").on('click', function(event) {
+
+		// Make sure this.hash has a value before overriding default behavior
+		if (this.hash !== "") {
+	
+		  // Prevent default anchor click behavior
+		  event.preventDefault();
+	
+		  // Store hash
+		  var hash = this.hash;
+	
+		  // Using jQuery's animate() method to add smooth page scroll
+		  // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+		  $('html, body').animate({
+			scrollTop: $(hash).offset().top
+		  }, 900, function(){
+	   
+			// Add hash (#) to URL when done scrolling (default click behavior)
+			window.location.hash = hash;
+		  });
+		} // End if
+	  });
+
 	"use strict";
 
 	/* 
@@ -134,48 +157,53 @@ $(document).ready(function()
 			var playlist = 
 			[
 				{
-					title:"Better Days",
-					artist:"Bensound",
+					title:"You don’t really love me",
+					artist:"Moosic",
 					mp3:"files/bensound-betterdays.mp3",
-					duration:"2.33"
+					duration:"3.50"
 				},
 				{
-					title:"Dubstep",
-					artist:"Bensound",
+					title:"So done with you",
+					artist:"Moosic",
 					mp3:"files/bensound-dubstep.mp3",
-					duration:"2.04"
+					duration:"4.23"
 				},
 				{
-					title:"Sunny",
-					artist:"Bensound",
+					title:"I actually still love you",
+					artist:"Moosic",
 					mp3:"files/bensound-sunny.mp3",
-					duration:"2.20"
+					duration:"3.57"
 				},
 				{
-					title:"Better Days",
-					artist:"Bensound",
+					title:"Call me back please",
+					artist:"Moosic",
 					mp3:"files/bensound-betterdays.mp3",
-					duration:"2.33"
+					duration:"5.08"
 				},
 				{
-					title:"Dubstep",
-					artist:"Bensound",
+					title:"Bye baby bye",
+					artist:"Moosic",
 					mp3:"files/bensound-dubstep.mp3",
-					duration:"2.04"
+					duration:"3.15"
 				},
 				{
-					title:"Sunny",
-					artist:"Bensound",
+					title:"We togethery",
+					artist:"Moosic",
 					mp3:"files/bensound-sunny.mp3",
-					duration:"2.20"
-				}
+					duration:"3.46"
+				},
+				{
+					title:"Together Forever",
+					artist:"Moosic",
+					mp3:"files/bensound-dubstep.mp3",
+					duration:"4.05"
+				},
 			];
-			$( "div.demo-container" ).html(function() {
+			$( "div.music-container" ).html(function() {
 				var musicTotal = 0;
 				var musicTime = null;
 			    $.each(playlist, function(i,song) {
 			      var time = song.duration.split(".");
-			      var currentTime = song.duration;
 			      //For each number in the array, get the seconds and add it to the musicTotal 
 			      $.each(time, function(i, timeframe) {
 			        var minutes = 0;
@@ -189,13 +217,13 @@ $(document).ready(function()
 			          musicTotal = musicTotal + seconds; //add parsed int to musicTotal
 			        }
 			      })
-			    })
+				})
 			    var mh = Math.floor(musicTotal/3600); //Get whole hours
 			    var mm = Math.floor(musicTotal/60); //Get remaining minutes
 			    musicTotal -= mh*3600;
 			    musicTotal -= mm*60;
-			    musicTime = mh+":"+(mm < 10 ? '0'+mm : mm)+":"+(musicTotal < 10 ? '0'+musicTotal : musicTotal);
-			    return "Total Time: " + musicTime;
+				musicTime = mh+":"+(mm < 10 ? '0'+mm : mm)+":"+(musicTotal < 10 ? '0'+musicTotal : musicTotal);
+				return "Total Time: " + musicTime.substring(2,7);
 				});
 
 			var options =

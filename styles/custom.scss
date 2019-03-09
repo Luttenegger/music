@@ -1,0 +1,104 @@
+$primary : black;
+$secondary: #de4f32;
+
+@font-face {
+	font-family: 'JFJUNROC';
+	src: url('../fonts/JFJUNROC.eot');
+	src: local('JFJUNROC'), url('../fonts/JFJUNROC.woff') format('woff'), url('../fonts/JFJUNROC.ttf') format('truetype');
+}
+
+.video_title h1 {
+    font-family: 'JFJUNROC' !important;
+    font-size:10vw;
+    color:white;
+}
+
+.album-title h1 {
+    padding-top:300px;
+    text-align: center;
+    font-size:5vw;
+}
+.album-title h4 {
+    margin-top:-30px;
+    text-align: center;
+    font-size:3vw;
+}
+
+.home {
+    width: 100%;
+    height: 850px;
+    padding-left: 51px;
+    padding-right: 52px;
+}
+
+@media only screen and (min-width: 960px) {
+    /* For tablets: */
+    video {
+        display:none;
+    }
+  }
+  @media only screen and (min-width: 1080px) {
+    /* For desktop: */
+    video {
+        display:block;
+    }
+    .cover {
+        display: none;
+    }
+  }
+
+  .form-input {
+    width: 100%;
+    height: 50px;
+    background: #545454;
+    border: none;
+    outline: none;
+    padding-left: 23px;
+}
+
+.form-control {
+    color:$secondary;
+}
+.form-control:focus {
+    color: $secondary;
+    background-color: #545454;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+.btn-primary {
+    background:$secondary !important;
+    border:none;
+}
+
+.right {
+    float:right;
+}
+
+.artist_content {
+    padding-top:0px;
+}
+.artist {
+    padding-top:190px;
+}
+
+  /* Theme Colors */
+  .jp-play {
+      background:$secondary;
+  }
+
+  body {
+      background:$primary;
+  }
+  .header {
+      background:$primary;
+  }
+  .artist {
+      background:$primary;
+  }
+  .footer {
+      background:$primary;
+  }
+  .copyright_bar {
+      background:$primary;
+  }
