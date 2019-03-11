@@ -134,15 +134,6 @@
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
-.social {
-  left: 15%;
-}
-
-.social li {
-  display: inline-block;
-  margin-left: 15px;
-}
-
 .btn-primary {
   background: #E0BD87 !important;
   border: none;
@@ -172,8 +163,24 @@
   padding-right: 20px;
 }
 
-.highlight {
-  background: red;
+a .fab {
+  padding-left: 15px;
+  color: #F4E8D8;
+}
+
+a:hover .artistSocial {
+  padding-left: 15px;
+  color: #6A4362;
+  cursor: pointer;
+}
+
+.socialFooter {
+  text-align: center;
+}
+
+.socialFooter i:hover {
+  color: #2b1b27;
+  cursor: pointer;
 }
 
 /* Theme Colors */
