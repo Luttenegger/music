@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Mixtape</title>
+<title>Moosic</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Mixtape template project">
@@ -14,7 +14,10 @@
 <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
 <link rel="stylesheet" type="text/css" href="styles/responsive.css">
 <link rel="stylesheet" type="text/css" href="styles/custom.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
+
+<link rel="icon" href="favicon.ico" sizes="16x16" type="image/png"> 
 </head>
 <body data-target=".navbar">
 
@@ -70,34 +73,33 @@
 
 	<!-- Home -->
 
-	<div class="home">
-		<div class="home_slider_container">
-			
-			<!-- Home Slider -->
-			<div class="owl-carousel owl-theme home_slider">
-				
-				<!-- Slide -->
-				<div class="owl-item">
-					<video autoplay muted loop id="myVideo" class="background_image">
-						<source src="https://www.videvo.net/videvo_files/converted/2016_07/preview/160720_21_ReeltoReel_VU2_2K.mp446900.webm" type="video/mp4">
-						Your browser does not support HTML5 video.
-					</video>
-					<div class="background_image cover" style="background-image:url(images/index.jpg)"></div>
-					<div class="home_container">
-						<div class="home_container_inner d-flex flex-column align-items-center justify-content-center">
-							<div class="home_content text-center">
-								<div class="video_title"><h1>Moosic</h1></div>
-							</div>
-						</div>
-					</div>
+<!-- 	<div class="home">
+		<video autoplay muted loop id="myVideo" class="background_image">
+			<source src="https://www.videvo.net/videvo_files/converted/2016_07/preview/160720_21_ReeltoReel_VU2_2K.mp446900.webm" type="video/mp4">
+			Your browser does not support HTML5 video.
+		</video>
+		<div class="background_image cover" style="background-image:url(images/index.jpg)"></div>
+		<div class="home_container">
+			<div class="home_container_inner d-flex flex-column align-items-center justify-content-center">
+				<div class="home_content text-center">
+					<div class="video_title"><h1>Moosic</h1></div>
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<!-- Featured Album -->
 
-	<div class="featured_album">
+	<div class="">
+		<div class="video-overlay"></div>
+		<div class="video_title"><h1>Moosic</h1></div>
+		<video autoplay muted loop id="myVideo">
+			<source src="https://www.videvo.net/videvo_files/converted/2016_07/preview/160720_21_ReeltoReel_VU2_2K.mp446900.webm" type="video/mp4">
+			Your browser does not support HTML5 video.
+		</video>
+	</div>
+
+	<div class="featured_album odd">
 		<div class="background_image featured_background" style="background-image:url(images/featured.png)"></div>
 		<div class="container">
 			<div class="row">
@@ -284,19 +286,18 @@
 
 	<!-- Artist -->
 
-	<div class="artist">
+	<div class="artist odd">
 		<div class="container">
 			<div class="row"  id="about">
-
 				<!-- Artist Image -->
-				<div class="col-lg-4 artist_image_col">
+				<div class="col-lg-6 artist_image_col">
 					<div class="artist_image">
+							<div class="image_overlay"></div>
 						<img src="images/artist.png" alt="">
 					</div>
 				</div>
-
 				<!-- Artist Content -->
-				<div class="col-lg-7 offset-lg-1">
+				<div class="col-lg-6">
 					<div class="artist_content">
 						<div class="section_title_container">
 							<div class="section_title"><h1>The Band</h1></div>
@@ -317,7 +318,6 @@
 
 	<footer class="footer" id="contact">
 		<section class="mb-4">
-
 				<!--Section heading-->
 				<h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
 				<!--Section description-->

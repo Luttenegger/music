@@ -202,28 +202,30 @@ $(document).ready(function()
 			$( "div.music-container" ).html(function() {
 				var musicTotal = 0;
 				var musicTime = null;
+				var totalSongs = 0;
 			    $.each(playlist, function(i,song) {
-			      var time = song.duration.split(".");
-			      //For each number in the array, get the seconds and add it to the musicTotal 
-			      $.each(time, function(i, timeframe) {
-			        var minutes = 0;
-			        var seconds = 0;
-			        if (i == 0) {
-			          minutes = parseInt(timeframe) * 60; //converts string to int
-			          musicTotal = musicTotal + minutes; //add parsed int to musicTotal
-			        }
-			        else {
-			          seconds = parseInt(timeframe); //converts string to int
-			          musicTotal = musicTotal + seconds; //add parsed int to musicTotal
-			        }
-			      })
+					totalSongs++
+					var time = song.duration.split(".");
+					//For each number in the array, get the seconds and add it to the musicTotal 
+			      	$.each(time, function(i, timeframe) {
+			        	var minutes = 0;
+			        	var seconds = 0;
+			        	if (i == 0) {
+			          	minutes = parseInt(timeframe) * 60; //converts string to int
+			          	musicTotal = musicTotal + minutes; //add parsed int to musicTotal
+			        	}
+			        	else {
+			          	seconds = parseInt(timeframe); //converts string to int
+			          	musicTotal = musicTotal + seconds; //add parsed int to musicTotal
+			        	}
+			      	})
 				})
 			    var mh = Math.floor(musicTotal/3600); //Get whole hours
 			    var mm = Math.floor(musicTotal/60); //Get remaining minutes
 			    musicTotal -= mh*3600;
 			    musicTotal -= mm*60;
 				musicTime = mh+":"+(mm < 10 ? '0'+mm : mm)+":"+(musicTotal < 10 ? '0'+musicTotal : musicTotal);
-				return "Total Time: " + musicTime.substring(2,7);
+				return "Total Time: " + musicTime.substring(2,7) + " | Tracks: " + totalSongs;
 				});
 
 			var options =
