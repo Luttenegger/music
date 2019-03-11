@@ -1,8 +1,8 @@
-$primary : #234D20;
-$secondary: #36802D;
-$tertiary: #77AB59;
-$text: white;
-$odd: rgb(9, 36, 7); //Make this color darker than the primary color
+$primary : #6A4362;
+$secondary: #E0BD87;
+$tertiary: #65919A;
+$text: #F4E8D8;
+$darkPrimary: rgb(43, 27, 39); //Make this color a darker version than the primary color
 $overlay: rgba(5, 17, 4, 0.6);
 
 @font-face {
@@ -20,11 +20,11 @@ $overlay: rgba(5, 17, 4, 0.6);
 }
 
 .video_title h1 {
+    $color:$secondary;
     font-family: 'JFJUNROC' !important;
     font-size:10vw;
     color:white;
 }
-
 
 .album-title h1 {
     padding-top:300px;
@@ -48,12 +48,65 @@ $overlay: rgba(5, 17, 4, 0.6);
     bottom: 100px;
 }
 
+.artist_text {
+    z-index:2;
+}
+
+.video-overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    background: $overlay;
+}
+
+.home-content img {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
 @media only screen and (min-width: 960px) {
     /* For tablets: */
     video {
         display:none;
     }
+    .album-title h1 {
+        padding-top: 300px;
+        text-align: center;
+        font-size: 7vw;
+    }
   }
+  @media only screen and (max-width: 991px) {
+    .artist_image img {
+        max-width: 100%;
+        opacity: 0.2;
+    }
+    video {
+        display:none;
+    }
+    .album-title h1 {
+        padding-top: 300pxpx;
+        text-align: center;
+        font-size: 7vw;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .artist_image img {
+        max-width:100%;
+    }
+    video {
+        display:none;
+    }
+    .album-title h1 {
+        padding-top: 160px;
+        text-align: center;
+        font-size: 12vw;
+    }
+}
   @media only screen and (min-width: 1080px) {
     /* For desktop: */
     video {
@@ -61,16 +114,7 @@ $overlay: rgba(5, 17, 4, 0.6);
         width:100%;
         height:auto;
     }
-    .video-overlay {
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        z-index: 2;
-        background: $overlay;
-    }
-    .cover {
+    .home-content img {
         display: none;
     }
   }
@@ -136,11 +180,11 @@ $overlay: rgba(5, 17, 4, 0.6);
   }
 
   .odd {
-      background:$odd !important;
+      background:$darkPrimary !important;
   }
 
   .header {
-      background:$odd;
+      background:$darkPrimary;
   }
   .artist {
       background:$primary;
@@ -152,7 +196,13 @@ $overlay: rgba(5, 17, 4, 0.6);
       background:$primary;
   }
   .show_date {
-      background:$secondary;
+      background:$darkPrimary;
+  }
+  .show_shop {
+      background: $secondary;
+  }
+  .show_shop:hover {
+      background:$primary;
   }
   .btn-primary {
       background:$secondary;
@@ -164,15 +214,21 @@ $overlay: rgba(5, 17, 4, 0.6);
       background:$tertiary;
   }
   .image_overlay {
-      background:$odd;
+      background:$darkPrimary;
   }
   .main_nav ul li a::after {
       background:$secondary;
   }
-
-  .show_shop:hover {
-      background:$primary;
+  .show_name a:hover {
+      color:$secondary;
   }
-  .show_shop {
-      background: $odd;
+  .menu_nav {
+      background:$darkPrimary;
+      border-bottom: solid 5px $secondary;
+  }
+  .menu_nav ul li a:hover {
+      color:$secondary;
+  }
+  .menu_nav ul li {
+      color:$text;
   }

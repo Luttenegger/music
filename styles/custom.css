@@ -40,10 +40,68 @@
   bottom: 100px;
 }
 
+.artist_text {
+  z-index: 2;
+}
+
+.video-overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+  background: rgba(5, 17, 4, 0.6);
+}
+
+.home-content img {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
 @media only screen and (min-width: 960px) {
   /* For tablets: */
   video {
     display: none;
+  }
+
+  .album-title h1 {
+    padding-top: 300px;
+    text-align: center;
+    font-size: 7vw;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .artist_image img {
+    max-width: 100%;
+    opacity: 0.2;
+  }
+
+  video {
+    display: none;
+  }
+
+  .album-title h1 {
+    padding-top: 300pxpx;
+    text-align: center;
+    font-size: 7vw;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .artist_image img {
+    max-width: 100%;
+  }
+
+  video {
+    display: none;
+  }
+
+  .album-title h1 {
+    padding-top: 160px;
+    text-align: center;
+    font-size: 12vw;
   }
 }
 @media only screen and (min-width: 1080px) {
@@ -54,36 +112,26 @@
     height: auto;
   }
 
-  .video-overlay {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    z-index: 2;
-    background: rgba(5, 17, 4, 0.6);
-  }
-
-  .cover {
+  .home-content img {
     display: none;
   }
 }
 .form-input {
   width: 100%;
   height: 50px;
-  background: #77AB59;
+  background: #65919A;
   border: none;
   outline: none;
   padding-left: 23px;
 }
 
 .form-control {
-  color: white;
+  color: #F4E8D8;
 }
 
 .form-control:focus {
-  color: white;
-  background-color: #36802D;
+  color: #F4E8D8;
+  background-color: #E0BD87;
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
@@ -98,7 +146,7 @@
 }
 
 .btn-primary {
-  background: #36802D !important;
+  background: #E0BD87 !important;
   border: none;
 }
 
@@ -123,64 +171,81 @@
 
 /* Theme Colors */
 .jp-play {
-  background: #36802D;
+  background: #E0BD87;
 }
 
 body {
-  background: #234D20;
-  color: white;
+  background: #6A4362;
+  color: #F4E8D8;
 }
 
 .odd {
-  background: #092407 !important;
+  background: #2b1b27 !important;
 }
 
 .header {
-  background: #092407;
+  background: #2b1b27;
 }
 
 .artist {
-  background: #234D20;
+  background: #6A4362;
 }
 
 .footer {
-  background: #234D20;
+  background: #6A4362;
 }
 
 .copyright_bar {
-  background: #234D20;
+  background: #6A4362;
 }
 
 .show_date {
-  background: #36802D;
-}
-
-.btn-primary {
-  background: #36802D;
-}
-
-.featured_album_link {
-  background: #36802D;
-}
-
-.shows_list li {
-  background: #77AB59;
-}
-
-.image_overlay {
-  background: #092407;
-}
-
-.main_nav ul li a::after {
-  background: #36802D;
-}
-
-.show_shop:hover {
-  background: #234D20;
+  background: #2b1b27;
 }
 
 .show_shop {
-  background: #092407;
+  background: #E0BD87;
+}
+
+.show_shop:hover {
+  background: #6A4362;
+}
+
+.btn-primary {
+  background: #E0BD87;
+}
+
+.featured_album_link {
+  background: #E0BD87;
+}
+
+.shows_list li {
+  background: #65919A;
+}
+
+.image_overlay {
+  background: #2b1b27;
+}
+
+.main_nav ul li a::after {
+  background: #E0BD87;
+}
+
+.show_name a:hover {
+  color: #E0BD87;
+}
+
+.menu_nav {
+  background: #2b1b27;
+  border-bottom: solid 5px #E0BD87;
+}
+
+.menu_nav ul li a:hover {
+  color: #E0BD87;
+}
+
+.menu_nav ul li {
+  color: #F4E8D8;
 }
 
 /*# sourceMappingURL=custom.css.map */
