@@ -17,6 +17,7 @@
 
 $(document).ready(function()
 {
+
 	$("nav a, footer a[href='#main']").on('click', function(event) {
 
 		// Make sure this.hash has a value before overriding default behavior

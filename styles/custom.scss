@@ -30,11 +30,6 @@ $overlay: rgba(5, 17, 4, 0.6);
     font-weight: bolder;
 }
 
-.album-title h1 {
-    padding-top:300px;
-    text-align: center;
-    font-size:5vw;
-}
 .album-title h4 {
     margin-top:-30px;
     text-align: center;
@@ -81,7 +76,7 @@ $overlay: rgba(5, 17, 4, 0.6);
     .album-title h1 {
         padding-top: 300px;
         text-align: center;
-        font-size: 7vw;
+        font-size: 5vw;
     }
   }
   @media only screen and (max-width: 991px) {
@@ -93,9 +88,9 @@ $overlay: rgba(5, 17, 4, 0.6);
         display:none;
     }
     .album-title h1 {
-        padding-top: 300pxpx;
+        padding-top: 300px;
         text-align: center;
-        font-size: 7vw;
+        font-size: 5vw;
     }
 }
 @media only screen and (max-width: 767px) {
@@ -173,6 +168,14 @@ $overlay: rgba(5, 17, 4, 0.6);
     left: 0;
 }
 
+.fas {
+    margin-left:-40px;
+    padding-right:20px;
+}
+.highlight {
+    background:red;
+}
+
   /* Theme Colors */
   .jp-play {
       background:$secondary;
@@ -236,3 +239,20 @@ $overlay: rgba(5, 17, 4, 0.6);
   .menu_nav ul li {
       color:$text;
   }
+  .jp-playlist {
+      background:$darkPrimary;
+  }
+  .featured_album_player{
+    background:$darkPrimary;
+}
+
+.jp-type-playlist div.jp-playlist a {
+    color: $text !important;
+}
+.jp-playlist li > div::before {
+    display: none;
+}
+
+.jp-playlist li::before, #jp_container_1.jp-state-playing .jp-playlist li.jp-playlist-current::before {
+    background:$primary;
+}

@@ -21,12 +21,6 @@
   font-weight: bolder;
 }
 
-.album-title h1 {
-  padding-top: 300px;
-  text-align: center;
-  font-size: 5vw;
-}
-
 .album-title h4 {
   margin-top: -30px;
   text-align: center;
@@ -74,7 +68,7 @@
   .album-title h1 {
     padding-top: 300px;
     text-align: center;
-    font-size: 7vw;
+    font-size: 5vw;
   }
 }
 @media only screen and (max-width: 991px) {
@@ -88,9 +82,9 @@
   }
 
   .album-title h1 {
-    padding-top: 300pxpx;
+    padding-top: 300px;
     text-align: center;
-    font-size: 7vw;
+    font-size: 5vw;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -173,6 +167,15 @@
   left: 0;
 }
 
+.fas {
+  margin-left: -40px;
+  padding-right: 20px;
+}
+
+.highlight {
+  background: red;
+}
+
 /* Theme Colors */
 .jp-play {
   background: #E0BD87;
@@ -250,6 +253,26 @@ body {
 
 .menu_nav ul li {
   color: #F4E8D8;
+}
+
+.jp-playlist {
+  background: #2b1b27;
+}
+
+.featured_album_player {
+  background: #2b1b27;
+}
+
+.jp-type-playlist div.jp-playlist a {
+  color: #F4E8D8 !important;
+}
+
+.jp-playlist li > div::before {
+  display: none;
+}
+
+.jp-playlist li::before, #jp_container_1.jp-state-playing .jp-playlist li.jp-playlist-current::before {
+  background: #6A4362;
 }
 
 /*# sourceMappingURL=custom.css.map */
