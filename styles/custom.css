@@ -266,6 +266,7 @@ body {
 .menu_nav {
   background: #2b1b27;
   border-bottom: solid 5px #E0BD87;
+  border-top: solid 5px #E0BD87;
 }
 
 .menu_nav ul li a:hover {
@@ -290,6 +291,15 @@ body {
 
 .jp-playlist li::before, #jp_container_1.jp-state-playing .jp-playlist li.jp-playlist-current::before {
   background: #6A4362;
+}
+
+.menu_log_reg {
+  background: #2b1b27;
+  border-bottom: solid 2px #E0BD87;
+}
+
+.menu_log_reg a:hover {
+  color: #E0BD87;
 }
 
 /*# sourceMappingURL=custom.css.map */

@@ -253,6 +253,7 @@ body {
 .menu_nav {
     background:$darkPrimary;
     border-bottom: solid 5px $secondary;
+    border-top: solid 5px $secondary;
 }
 .menu_nav ul li a:hover {
     color:$secondary;
@@ -272,4 +273,11 @@ body {
 }
 .jp-playlist li::before, #jp_container_1.jp-state-playing .jp-playlist li.jp-playlist-current::before {
     background:$primary;
+}
+.menu_log_reg {
+    background:$darkPrimary;
+    border-bottom: solid 2px $secondary;
+}
+.menu_log_reg a:hover {
+    color:$secondary;
 }
