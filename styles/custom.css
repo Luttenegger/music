@@ -182,6 +182,10 @@ a:hover .artistSocial {
   text-align: center;
 }
 
+.shows {
+  padding-top: 130px;
+}
+
 .socialFooter i:hover {
   color: #2b1b27;
   cursor: pointer;
