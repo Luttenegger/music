@@ -187,7 +187,7 @@ $(document).ready(function()
 					duration:"3.15"
 				},
 				{
-					title:"We togethery",
+					title:"We together",
 					artist:"Moosic",
 					mp3:"files/bensound-sunny.mp3",
 					duration:"3.46"
