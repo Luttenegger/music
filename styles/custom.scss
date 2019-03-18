@@ -1,14 +1,33 @@
-$primary : #234D20;
-$secondary: #36802D;
-$tertiary: #77AB59;
-$text: white;
-$odd: rgb(9, 36, 7); //Make this color darker than the primary color
+$primary : #6A4362;
+$secondary: #E0BD87;
+$tertiary: #65919A;
+$text: #F4E8D8;
+$darkPrimary: rgb(43, 27, 39); //Make this color a darker version than the primary color
 $overlay: rgba(5, 17, 4, 0.6);
 
 @font-face {
 	font-family: 'JFJUNROC';
 	src: url('../fonts/JFJUNROC.eot');
 	src: local('JFJUNROC'), url('../fonts/JFJUNROC.woff') format('woff'), url('../fonts/JFJUNROC.ttf') format('truetype');
+}
+
+/* Home */
+.home {
+    width: 100%;
+    height: 850px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.home-content img {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.logo a {
+    font-weight: bolder;
 }
 
 .video_title {
@@ -20,95 +39,38 @@ $overlay: rgba(5, 17, 4, 0.6);
 }
 
 .video_title h1 {
+    $color:$secondary;
     font-family: 'JFJUNROC' !important;
     font-size:10vw;
     color:white;
 }
 
-
-.album-title h1 {
-    padding-top:300px;
-    text-align: center;
-    font-size:5vw;
-}
-.album-title h4 {
-    margin-top:-30px;
-    text-align: center;
-    font-size:3vw;
-}
-
-.home {
+.video-overlay {
+    height: 100%;
     width: 100%;
-    height: 850px;
-    padding-left: 0px;
-    padding-right: 0px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    background: $overlay;
+}
+
+/*Album Player */
+.jp-playlist li > div::before {
+    display: none;
 }
 
 .featured_background {
     bottom: 100px;
 }
 
-@media only screen and (min-width: 960px) {
-    /* For tablets: */
-    video {
-        display:none;
-    }
-  }
-  @media only screen and (min-width: 1080px) {
-    /* For desktop: */
-    video {
-        display:block;
-        width:100%;
-        height:auto;
-    }
-    .video-overlay {
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        z-index: 2;
-        background: $overlay;
-    }
-    .cover {
-        display: none;
-    }
-  }
-
-  .form-input {
-    width: 100%;
-    height: 50px;
-    background: $tertiary;
-    border: none;
-    outline: none;
-    padding-left: 23px;
+.album-title h4 {
+    margin-top:-30px;
+    text-align: center;
+    font-size:3vw;
 }
-
-.form-control {
-    color:$text;
-}
-.form-control:focus {
-    color: $text;
-    background-color: $secondary;
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
-}
-
-.social {
-    left:15%
-}
-.social li {
-    display: inline-block;
-    margin-left:15px;
-}
-
-.btn-primary {
-    background:$secondary !important;
-    border:none;
-}
-
-.right {
-    float:right;
+.artist_text {
+    z-index:2;
 }
 
 .artist_content {
@@ -125,54 +87,197 @@ $overlay: rgba(5, 17, 4, 0.6);
     left: 0;
 }
 
-  /* Theme Colors */
-  .jp-play {
-      background:$secondary;
+/*Upcoming Shows*/
+.shows {
+    padding-top:130px;
+}
+
+/*Form */
+.form-control {
+    color:$text;
+}
+.form-control:focus {
+    color: $text;
+    background-color: $secondary;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+.btn-primary {
+    background:$secondary !important;
+    border:none;
+}
+
+.fas {
+    margin-left:-40px;
+    padding-right:20px;
+}
+
+a .fab {
+    padding-left:15px;
+    color:$text;
+}
+
+a:hover .artistSocial {
+    padding-left:15px;
+    color:$primary;
+    cursor: pointer;
+}
+
+/*Footer*/
+.socialFooter i:hover {
+    color:$darkPrimary;
+    cursor: pointer;
+}
+
+.socialFooter {
+    text-align: center;
+}
+
+/*Responsive Stuff*/
+@media only screen and (min-width: 960px) {
+    /* For tablets: */
+    video {
+        display:none;
+    }
+    .album-title h1 {
+        padding-top: 300px;
+        text-align: center;
+        font-size: 5vw;
+    }
+  }
+  @media only screen and (max-width: 991px) {
+    .artist_image img {
+        max-width: 100%;
+        opacity: 0.2;
+    }
+    video {
+        display:none;
+    }
+    .album-title h1 {
+        padding-top: 300px;
+        text-align: center;
+        font-size: 5vw;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .artist_image img {
+        max-width:100%;
+    }
+    video {
+        display:none;
+    }
+    .album-title h1 {
+        padding-top: 160px;
+        text-align: center;
+        font-size: 12vw;
+    }
+    .featured_album_col {
+        margin-bottom: 50px;
+    }
+}
+  @media only screen and (min-width: 1080px) {
+    /* For desktop: */
+    video {
+        display:block;
+        width:100%;
+        height:auto;
+    }
+    .home-content img {
+        display: none;
+    }
   }
 
-  body {
-      background:$primary;
-      color:$text;
-  }
+  .form-input {
+    width: 100%;
+    height: 50px;
+    background: $tertiary;
+    border: none;
+    outline: none;
+    padding-left: 23px;
+}
 
-  .odd {
-      background:$odd !important;
-  }
+/* Theme Colors */
+.jp-play {
+    background:$secondary;
+}
 
-  .header {
-      background:$odd;
-  }
-  .artist {
-      background:$primary;
-  }
-  .footer {
-      background:$primary;
-  }
-  .copyright_bar {
-      background:$primary;
-  }
-  .show_date {
-      background:$secondary;
-  }
-  .btn-primary {
-      background:$secondary;
-  }
-  .featured_album_link {
-      background:$secondary;
-  }
-  .shows_list li {
-      background:$tertiary;
-  }
-  .image_overlay {
-      background:$odd;
-  }
-  .main_nav ul li a::after {
-      background:$secondary;
-  }
+body {
+    background:$primary;
+    color:$text;
+}
 
-  .show_shop:hover {
-      background:$primary;
-  }
-  .show_shop {
-      background: $odd;
-  }
+.odd {
+    background:$darkPrimary !important;
+}
+
+.header {
+    background:$darkPrimary;
+}
+.artist {
+    background:$primary;
+}
+.footer {
+    background:$primary;
+}
+.copyright_bar {
+    background:$primary;
+}
+.show_date {
+    background:$darkPrimary;
+}
+.show_shop {
+    background: $secondary;
+}
+.show_shop:hover {
+    background:$primary;
+}
+.btn-primary {
+    background:$secondary;
+}
+.featured_album_link {
+    background:$secondary;
+}
+.shows_list li {
+    background:$tertiary;
+}
+.image_overlay {
+    background:$darkPrimary;
+}
+.main_nav ul li a::after {
+    background:$secondary;
+}
+.show_name a:hover {
+    color:$secondary;
+}
+.menu_nav {
+    background:$darkPrimary;
+    border-bottom: solid 5px $secondary;
+    border-top: solid 5px $secondary;
+}
+.menu_nav ul li a:hover {
+    color:$secondary;
+}
+.menu_nav ul li {
+    color:$text;
+}
+.jp-playlist {
+    background:$darkPrimary;
+}
+.featured_album_player{
+    background:$darkPrimary;
+}
+
+.jp-type-playlist div.jp-playlist a {
+    color: $text !important;
+}
+.jp-playlist li::before, #jp_container_1.jp-state-playing .jp-playlist li.jp-playlist-current::before {
+    background:$primary;
+}
+.menu_log_reg {
+    background:$darkPrimary;
+    border-bottom: solid 2px $secondary;
+}
+.menu_log_reg a:hover {
+    color:$secondary;
+}

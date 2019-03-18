@@ -8,9 +8,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="styles/bootstrap-4.1.2/bootstrap.min.css">
 <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
 <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
 <link rel="stylesheet" type="text/css" href="styles/responsive.css">
 <link rel="stylesheet" type="text/css" href="styles/custom.css">
@@ -29,7 +26,7 @@
 			<div class="logo"><a href="#">Moosic</a></div>
 			<nav class="main_nav">
 				<ul class="d-flex flex-row align-items-start justify-content-start navbar">
-					<li class="active"><a href="#main">Home</a></li>
+					<li><a href="#main">Home</a></li>
 					<li><a href="#music">Music</a></li>
 					<li><a href="#events">Events</a></li>
 					<li><a href="#about">About us</a></li>
@@ -52,60 +49,35 @@
 		<div>
 			<div class="menu_overlay"></div>
 			<div class="menu_container d-flex flex-column align-items-start justify-content-center">
-				<div class="menu_log_reg">
-					<ul class="d-flex flex-row align-items-start justify-content-start">
-						<li><a href="#">Login</a></li>
-						<li><a href="#">Register</a></li>
-					</ul>
-				</div>
 				<nav class="menu_nav">
 					<ul class="d-flex flex-column align-items-start justify-content-start">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="about.html">About us</a></li>
-						<li><a href="music.html">Music</a></li>
-						<li><a href="blog.html">News</a></li>
-						<li><a href="contact.html">Contact</a></li>
+							<li><a href="#main">Home</a></li>
+							<li><a href="#music">Music</a></li>
+							<li><a href="#events">Events</a></li>
+							<li><a href="#about">About us</a></li>
+							<li><a href="#contact">Contact</a></li>
 					</ul>
 				</nav>
 			</div>
 		</div>
 	</div>
 
-	<!-- Home -->
-
-<!-- 	<div class="home">
-		<video autoplay muted loop id="myVideo" class="background_image">
-			<source src="https://www.videvo.net/videvo_files/converted/2016_07/preview/160720_21_ReeltoReel_VU2_2K.mp446900.webm" type="video/mp4">
-			Your browser does not support HTML5 video.
-		</video>
-		<div class="background_image cover" style="background-image:url(images/index.jpg)"></div>
-		<div class="home_container">
-			<div class="home_container_inner d-flex flex-column align-items-center justify-content-center">
-				<div class="home_content text-center">
-					<div class="video_title"><h1>Moosic</h1></div>
-				</div>
-			</div>
-		</div>
-	</div> -->
-
-	<!-- Featured Album -->
-
-	<div class="">
+	<div class="home-content" id="main">
 		<div class="video-overlay"></div>
 		<div class="video_title"><h1>Moosic</h1></div>
 		<video autoplay muted loop id="myVideo">
 			<source src="https://www.videvo.net/videvo_files/converted/2016_07/preview/160720_21_ReeltoReel_VU2_2K.mp446900.webm" type="video/mp4">
 			Your browser does not support HTML5 video.
 		</video>
+		<img class="cover-image" src="images/index.jpg" />
 	</div>
 
-	<div class="featured_album odd">
+	<div class="featured_album odd" id="music">
 		<div class="background_image featured_background" style="background-image:url(images/featured.png)"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6 offset-lg-6">
-					<div class="section_title_container" id="music">
-						<div class="section_subtitle">Events</div>
+					<div class="section_title_container">
 						<div class="section_title"><h1>Featured Album</h1></div>
 					</div>
 				</div>
@@ -114,11 +86,9 @@
 
 				<!-- Featured Album Image -->
 				<div class="col-md-6">
-						<h4 style="position: absolute;">Test</h4>
 					<div class="featured_album_image">
 						<div class="image_overlay"></div>
 						<div class="background_image album-title" style="background-image:url(images/featured_album.jpg)">
-						
 						<h1>MOOSIC</h1><br>
 						<h4>Udder Chaos</h4>
 					</div>
@@ -191,11 +161,11 @@
 
 	<!-- Shows -->
 
-	<div class="shows">
+	<div class="shows" id="events">
 		<div class="container">
 			<div class="row" style="z-index:10;">
 				<div class="col">
-					<div class="section_title_container" id="events">
+					<div class="section_title_container">
 						<div class="section_subtitle">Events</div>
 						<div class="section_title"><h1>Upcoming Shows</h1></div>
 					</div>
@@ -212,7 +182,7 @@
 							<li class="d-flex flex-row align-items-center justify-content-start">
 								<div><div class="show_date">18/07</div></div>
 								<div class="show_info d-flex flex-md-row flex-column align-items-md-center align-items-start justify-content-md-start justify-content-center">
-									<div class="show_name"><a href="#">Electric Castle Festival</a></div>
+									<div class="show_name"><a href="#">Electric Festival</a></div>
 									<div class="show_location">Cluj, Romania</div>
 								</div>
 								<div class="ml-auto"><div class="show_shop trans_200"><a href="#">Buy Tickets</a></div></div>
@@ -222,7 +192,7 @@
 							<li class="d-flex flex-row align-items-center justify-content-start">
 								<div><div class="show_date">20/07</div></div>
 								<div class="show_info d-flex flex-md-row flex-column align-items-md-center align-items-start justify-content-md-start justify-content-center">
-									<div class="show_name"><a href="#">Ultra Music Festival</a></div>
+									<div class="show_name"><a href="#">Ultra Festival</a></div>
 									<div class="show_location">Miami, USA</div>
 								</div>
 								<div class="ml-auto"><div class="show_shop trans_200"><a href="#">Buy Tickets</a></div></div>
@@ -242,7 +212,7 @@
 							<li class="d-flex flex-row align-items-center justify-content-start">
 								<div><div class="show_date">11/08</div></div>
 								<div class="show_info d-flex flex-md-row flex-column align-items-md-center align-items-start justify-content-md-start justify-content-center">
-									<div class="show_name"><a href="#">Sun Kissed Festival</a></div>
+									<div class="show_name"><a href="#">Sun Festival</a></div>
 									<div class="show_location">Paris, France</div>
 								</div>
 								<div class="ml-auto"><div class="show_shop trans_200"><a href="#">Buy Tickets</a></div></div>
@@ -286,13 +256,12 @@
 
 	<!-- Artist -->
 
-	<div class="artist odd">
+	<div class="artist odd" id="about">
 		<div class="container">
-			<div class="row"  id="about">
+			<div class="row">
 				<!-- Artist Image -->
 				<div class="col-lg-6 artist_image_col">
 					<div class="artist_image">
-							<div class="image_overlay"></div>
 						<img src="images/artist.png" alt="">
 					</div>
 				</div>
@@ -300,7 +269,13 @@
 				<div class="col-lg-6">
 					<div class="artist_content">
 						<div class="section_title_container">
-							<div class="section_title"><h1>The Band</h1></div>
+							<div class="section_title"><h1>The Band
+								<span class="pull-right">
+									<a href="#"><i class="fab artistSocial fa-youtube trans_200"></i></a>
+									<a href="#"><i class="fab artistSocial fa-twitter trans_200"></i></a>
+									<a href="#"><i class="fab artistSocial fa-facebook trans_200"></i></a>
+								</span></h1>
+							</div>
 						</div>
 						<div class="artist_text">
 							<p> In vitae nisi aliquam, scelerisque leo a, volutpat sem. Vivamus rutrum dui fermentum eros hendrerit, id lobortis leo volutpat. Maecenas sollicitudin est in libero pretium interdum. Nullam volutpat dui sem, ac congue purus luctus nec. Curabitur luctus luctus erat, sit amet facilisis quam congue quis. Quisque ornare luctus erat id dignissim. Nullam ac nunc quis ex porttitor luctus.</p>
@@ -378,7 +353,7 @@
 			
 						</form>
 			
-						<div class="text-center text-md-left right">
+						<div class="text-center text-md-left pull-right">
 							<a class="btn btn-primary">Send</a>
 						</div>
 						<div class="status"></div>
@@ -387,13 +362,49 @@
 				</div>
 			
 			</section>
-				<!--Section: Contact v.2-->
-		<div class="copyright_bar">
-			<span><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-</span>
+		</span>
 		</div>
+		<!-- Footer Elements -->
+		<div class="container">
+
+			<!-- Grid row-->
+			<div class="row">
+	  
+			  <!-- Grid column -->
+			  <div class="col-md-12 py-5">
+				<div class="mb-5 flex-center socialFooter">
+	  
+				  <!-- Facebook -->
+				  <a class="fb-ic">
+					<i class="trans_200 fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+				  </a>
+				  <!-- Twitter -->
+				  <a class="tw-ic">
+					<i class="trans_200 fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+				  </a>
+				  <!-- Google +-->
+				  <a class="gplus-ic">
+					<i class="trans_200 fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+				  </a>
+				  <!--Instagram-->
+				  <a class="ins-ic">
+					<i class="trans_200 fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+				  </a>
+				</div>
+			  </div>
+			  <!-- Grid column -->
+	  
+			</div>
+			<!-- Grid row-->
+	  
+		  </div>
+		  <!-- Footer Elements -->
+	  
+		  <!-- Copyright -->
+		  <div class="footer-copyright text-center py-3">© 2018 Copyright: Moosic
+		  </div>
+		  <!-- Copyright -->
+	  
 	</footer>
 </div>
 
@@ -401,13 +412,10 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="styles/bootstrap-4.1.2/popper.js"></script>
 <script src="styles/bootstrap-4.1.2/bootstrap.min.js"></script>
 <script src="plugins/greensock/TweenMax.min.js"></script>
-<script src="plugins/greensock/TimelineMax.min.js"></script>
 <script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
 <script src="plugins/greensock/animation.gsap.min.js"></script>
 <script src="plugins/greensock/ScrollToPlugin.min.js"></script>
-<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
 <script src="plugins/easing/easing.js"></script>
-<script src="plugins/progressbar/progressbar.min.js"></script>
 <script src="plugins/parallax-js-master/parallax.min.js"></script>
 <script src="plugins/jPlayer/jquery.jplayer.min.js"></script>
 <script src="plugins/jPlayer/jplayer.playlist.min.js"></script>
